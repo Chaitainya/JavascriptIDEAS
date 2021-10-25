@@ -1,0 +1,15 @@
+
+    <button type="button" onclick="loop()">Loopie</button>
+    <script>
+        var i = 0;
+
+        function loop() {
+            if (i < 10) {
+                document.write(i + '<br><br>');
+                i++;
+                loop();
+            } else {
+                document.write("Ended you motherfucker");
+            }
+        }
+    </script>
