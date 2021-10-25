@@ -1,0 +1,71 @@
+    <title>Fill rect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        canvas {
+            height: 63rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <canvas></canvas>
+    </div>
+    <script>
+        var canvas = document.querySelector('canvas');
+
+        canvas.width = innerWidth = 1000;
+        canvas.height = innerHeight = 1400;
+
+        c = canvas.getContext('2d');
+        // Kingdome 1 started {
+        // line 1
+        c.fillRect(100, 100, 100, 100);
+        c.fillRect(300, 100, 100, 100);
+        c.fillRect(500, 100, 100, 100);
+        c.fillRect(700, 100, 100, 100);
+        // line 2
+        c.fillRect(200, 200, 100, 100);
+        c.fillRect(400, 200, 100, 100);
+        c.fillRect(600, 200, 100, 100);
+        c.fillRect(800, 200, 100, 100);
+        // line 3
+        c.fillRect(100, 300, 100, 100);
+        c.fillRect(300, 300, 100, 100);
+        c.fillRect(500, 300, 100, 100);
+        c.fillRect(700, 300, 100, 100);
+        // line 4
+        c.fillRect(200, 400, 100, 100);
+        c.fillRect(400, 400, 100, 100);
+        c.fillRect(600, 400, 100, 100);
+        c.fillRect(800, 400, 100, 100);
+        // Kingdom 1 ended }
+
+        // Kingdome 2 started {
+        // line 5 
+        c.fillRect(100, 500, 100, 100);
+        c.fillRect(300, 500, 100, 100);
+        c.fillRect(500, 500, 100, 100);
+        c.fillRect(700, 500, 100, 100);
+        // line 6
+        c.fillRect(200, 600, 100, 100);
+        c.fillRect(400, 600, 100, 100);
+        c.fillRect(600, 600, 100, 100);
+        c.fillRect(800, 600, 100, 100);
+        // line 7
+        c.fillRect(100, 700, 100, 100);
+        c.fillRect(300, 700, 100, 100);
+        c.fillRect(500, 700, 100, 100);
+        c.fillRect(700, 700, 100, 100);
+        // line 8
+        c.fillRect(200, 800, 100, 100);
+        c.fillRect(400, 800, 100, 100);
+        c.fillRect(600, 800, 100, 100);
+        c.fillRect(800, 800, 100, 100);
+        // Kingdom 2 ended }
+    </script>
