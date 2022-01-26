@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Background color</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            min-height: 100vh;
+            transition: .5s ease;
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the craziness</h1>
+    <script>
+        (function(){
+            randomCols();
+        })();
+
+        setInterval(() => {
+            randomCols();
+        }, 12000);
+
+        function randomCols(){
+                setTimeout(() => {document.body.style.backgroundColor = "blueviolet";}, 1000);
+                setTimeout(() => {document.body.style.backgroundColor = "chartreuse";}, 2000);
+                setTimeout(() => {document.body.style.backgroundColor = "darkorange";}, 3000);
+                setTimeout(() => {document.body.style.backgroundColor = "forestgreen";}, 4000);
+                setTimeout(() => {document.body.style.backgroundColor = "fuchsia";}, 5000);
+                setTimeout(() => {document.body.style.backgroundColor = "greenyellow";}, 6000);
+                setTimeout(() => {document.body.style.backgroundColor = "hotpink";}, 7000);
+                setTimeout(() => {document.body.style.backgroundColor = "lavender";}, 8000);
+                setTimeout(() => {document.body.style.backgroundColor = "lightblue";}, 9000);
+                setTimeout(() => {document.body.style.backgroundColor = "lightcoral";},10000);
+                setTimeout(() => {document.body.style.backgroundColor = "lightslategray";}, 11000);
+                setTimeout(() => {document.body.style.backgroundColor = "orangered";}, 12000);
+        }
+    </script>
+</body>
+</html>
