@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 1rem;
+            box-sizing: border-box;
+
+            width: 100%;
+            height: 100vh;
+
+            position: relative;
+        }
+
+        #moveMeBro {
+            height: 3rem;
+            width: 3rem;
+            background-color: purple;
+            border-radius: 3rem;
+            position: absolute;
+            transition: .3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="moveMeBro"></div>
+
+    <script>
+        setTimeout(() => { moveTheDiv(); }, 500);
+
+        var leftIncre = false;
+        var topDre = false;
+        var leftInt = 0;
+        var topInt = 0;
+        var rightDre = false
+
+        function moveTheDiv() {
+            for (var i = 0; i <= 1300; i++) {
+                if (leftIncre == false) {
+                    if (leftIncre == false) {
+                        document.getElementById('moveMeBro').style.left = leftInt + "px";
+                        leftInt++;
+                    }
+                    if (leftInt >= 1300) {
+                        leftIncre = true;
+                    }
+                }
+            }
+
+            if (leftIncre == true && topDre == false) {
+                setTimeout(() => {
+                    for (var j = 0; j <= 561; j++) {
+                        document.getElementById('moveMeBro').style.top = topInt + "px";
+                        topInt++;
+                    }
+
+                    if (topInt >= 561) {
+                        topDre = true;
+                    }
+
+                    setTimeout(() => {
+                        if (topDre == true && rightDre == false) {
+                            for (var k = 0; k <= 1280; k++) {
+                                document.getElementById('moveMeBro').style.left = leftInt + "px";
+                                leftInt--;
+                            }
+                        }
+
+                        if (leftInt <= 20) {
+                            rightDre = true;
+                        }
+
+                        setTimeout(() => {
+                            for (var l = 0; l <= 541; l++) {
+                                document.getElementById('moveMeBro').style.top = topInt + "px";
+                                topInt--;
+                            }
+
+                            if (topInt <= 21) {
+                                leftIncre = false;
+                                topDre = false;
+                                leftInt = 0;
+                                topInt = 0;
+                                rightDre = false
+                                setTimeout(() => { moveTheDiv(); }, 500);
+                            }
+                        }, 500);
+
+                    }, 500);
+
+                }, 500);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
